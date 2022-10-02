@@ -18,8 +18,7 @@ define("BEFORE_PULL", "");                                             // A comm
 define("AFTER_PULL", "");        
 
 $content = file_get_contents("php://input");
-echo $content;
-$json    = json_decode($content, true);
+$json    = json_decode(stripslashes($content), true);
 $file    = fopen(LOGFILE, "a");
 $time    = time();
 $token   = false;
