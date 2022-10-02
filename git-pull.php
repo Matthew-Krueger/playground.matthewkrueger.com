@@ -1,7 +1,15 @@
 <?php
-$output=null;
-$retval=null;
-exec('git pull', $output, $retval);
-echo "Returned with status $retval and output:\n";
-print_r($output);
-?.
+error_reporting(E_ALL);
+echo '<pre>';
+
+// Outputs all the result of shellcommand "ls", and returns
+// the last output line into $last_line. Stores the return value
+// of the shell command in $retval.
+$last_line = system('ls', $retval);
+
+// Printing additional info
+echo '
+</pre>
+<hr />Last line of the output: ' . $last_line . '
+<hr />Return value: ' . $retval;
+?>
