@@ -21,7 +21,7 @@ $content = file_get_contents("php://input");
 $json    = json_decode(stripslashes(html_entity_decode($content)), true);
 echo "<pre>";
 print_r($json);
-echo "</pre>";
+die( "</pre>");
 $file    = fopen(LOGFILE, "a");
 $time    = time();
 $token   = false;
