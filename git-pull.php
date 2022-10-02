@@ -19,6 +19,9 @@ define("AFTER_PULL", "");
 
 $content = file_get_contents("php://input");
 $json    = json_decode(stripslashes($content), true);
+echo "<pre>";
+print_r($json);
+echo "</pre>";
 $file    = fopen(LOGFILE, "a");
 $time    = time();
 $token   = false;
