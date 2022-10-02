@@ -21,9 +21,8 @@ $content = file_get_contents("php://input");
 if (strpos($content, "payload=") === 0) $content = substr($content, strlen("payload="));
 
 
-echo "<pre>";
 print_r($content);
-echo "</pre>";
+die();
 $json    = json_decode(stripslashes(html_entity_decode($content)), true);
 echo "<pre>";
 print_r($json);
