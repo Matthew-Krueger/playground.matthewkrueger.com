@@ -1,5 +1,10 @@
 <?php
 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
+
 require_once("../common/playground-common.php");
 
 define("REMOTE_REPOSITORY", "git@github.com:Matthew-Krueger/playground.matthewkrueger.com.git"); // The SSH URL to your repository
