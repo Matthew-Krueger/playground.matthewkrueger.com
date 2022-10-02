@@ -18,7 +18,7 @@ define("BEFORE_PULL", "");                                             // A comm
 define("AFTER_PULL", "");        
 
 $content = file_get_contents("php://input");
-if (strpos($content, "payload=") === 0) $content = substr($content, strlen("payload="));
+//if (strpos($content, "payload=") === 0) $content = substr($content, strlen("payload="));
 $content = html_entity_decode($content);
 //print_r($content);
 //die();
