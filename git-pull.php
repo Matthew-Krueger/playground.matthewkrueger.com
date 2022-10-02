@@ -18,38 +18,10 @@ define("BEFORE_PULL", "");                                             // A comm
 define("AFTER_PULL", "");        
 
 $content = file_get_contents("php://input");
-if (strpos($content, "payload=") === 0) $content = substr($content, strlen("payload="));
-die($content);
 //$content = html_entity_decode($content);
 //print_r($content);
 //die();
 $json    = json_decode($content, true);
-//echo "<pre>";
-print_r($json);
-switch (json_last_error()) {
-        case JSON_ERROR_NONE:
-            echo ' - No errors';
-        break;
-        case JSON_ERROR_DEPTH:
-            echo ' - Maximum stack depth exceeded';
-        break;
-        case JSON_ERROR_STATE_MISMATCH:
-            echo ' - Underflow or the modes mismatch';
-        break;
-        case JSON_ERROR_CTRL_CHAR:
-            echo ' - Unexpected control character found';
-        break;
-        case JSON_ERROR_SYNTAX:
-            echo ' - Syntax error, malformed JSON';
-        break;
-        case JSON_ERROR_UTF8:
-            echo ' - Malformed UTF-8 characters, possibly incorrectly encoded';
-        break;
-        default:
-            echo ' - Unknown error';
-        break;
-    }
-die();
 $file    = fopen(LOGFILE, "a");
 $time    = time();
 $token   = false;
