@@ -1,3 +1,6 @@
-PHP Info:
-
-<?php phpinfo(); ?>
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>hi</h1>
+  </body>
+</html>
