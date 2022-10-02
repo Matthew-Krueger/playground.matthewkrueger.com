@@ -19,7 +19,7 @@ define("AFTER_PULL", "");
 
 $content = file_get_contents("php://input");
 if (strpos($content, "payload=") === 0) $content = substr($content, strlen("payload="));
-$content = stripslashes(html_entity_decode($content));
+$content = html_entity_decode($content);
 //print_r($content);
 //die();
 $json    = json_decode($content, true);
