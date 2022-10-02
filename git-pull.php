@@ -5,7 +5,7 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 
-include("../common/playground-commons.php");
+require_once "../common/playground-commons.php");
 
 define("DIR", getGithubPushDir());
 define("TOKEN", getGithubPushToken());
