@@ -5,9 +5,10 @@ ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
 
 
-require_once "../common/playground-commons.php";
+$commons = parse_ini_file("../common/playground.ini");
 
-define("DIR", $githubPushDIR);
+define("TOKEN", $commons['github_token']);
+define("DIR", $commons['git_repo_dir']);
 define("REMOTE_REPOSITORY", "git@github.com:Matthew-Krueger/playground.matthewkrueger.com.git"); // The SSH URL to your repository
 define("BRANCH", "refs/heads/main");                                 // The branch route
 define("LOGFILE", "deploy.log");                                       // The name of the file you want to log to.
