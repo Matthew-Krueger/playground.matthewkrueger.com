@@ -21,12 +21,12 @@ $content = file_get_contents("php://input");
 if (strpos($content, "payload=") === 0) $content = substr($content, strlen("payload="));
 $content = stripslashes(html_entity_decode($content));
 
-print_r($content);
-die();
+//print_r($content);
+//die();
 $json    = json_decode($content, true);
-echo "<pre>";
+//echo "<pre>";
 print_r($json);
-die( "</pre>");
+die();
 $file    = fopen(LOGFILE, "a");
 $time    = time();
 $token   = false;
