@@ -7,6 +7,7 @@ error_reporting(E_ALL);
 
 require_once "../common/playground-commons.php";
 
+define("DIR", $githubPushDir);
 define("REMOTE_REPOSITORY", "git@github.com:Matthew-Krueger/playground.matthewkrueger.com.git"); // The SSH URL to your repository
 define("BRANCH", "refs/heads/main");                                 // The branch route
 define("LOGFILE", "deploy.log");                                       // The name of the file you want to log to.
