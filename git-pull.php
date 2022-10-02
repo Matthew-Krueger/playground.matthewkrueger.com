@@ -18,7 +18,7 @@ define("BEFORE_PULL", "");                                             // A comm
 define("AFTER_PULL", "");        
 
 $content = file_get_contents("php://input");
-$json    = json_decode(stripslashes($content), true);
+$json    = json_decode(stripslashes(html_entity_decode($content)), true);
 echo "<pre>";
 print_r($json);
 echo "</pre>";
